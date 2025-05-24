@@ -1,6 +1,7 @@
 sudo dnf update -y
 sudo dnf upgrade -y
 
+# Packages
 sudo dnf install -y \
   neovim \
   gcc \
@@ -12,6 +13,10 @@ sudo dnf install -y \
   gzip \
   akmod-nvidia \
   xorg-x11-drv-nvidia-cuda \
+  python3.12 \
+  fzf \
+  ripgrep \
+  stow \
 
 # Lazygit
 sudo dnf copr enable atim/lazygit -y

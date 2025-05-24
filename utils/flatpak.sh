@@ -1,7 +1,12 @@
+# Update
+flatpak update
+
+# Install applications
 flatpak install -y flathub \
   com.discordapp.Discord \
   com.valvesoftware.Steam \
-  com.heroicgameslauncher.hgl # Epic Games etc.
+  com.heroicgameslauncher.hgl \
+  com.spotify.Client \
 
 # Cleanup
 sudo flatpak uninstall --unused
