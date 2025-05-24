@@ -17,6 +17,7 @@ sudo dnf install -y \
   fzf \
   ripgrep \
   stow \
+  chromium \
 
 # Lazygit
 sudo dnf copr enable atim/lazygit -y
