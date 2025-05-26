@@ -13,6 +13,7 @@ brew install curl
 brew install wget
 brew install gnu-tar
 brew install gzip
+brew install stow
 
 # Wait before continuing
 sleep 1
