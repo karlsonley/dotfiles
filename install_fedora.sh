@@ -10,3 +10,8 @@ stow --dotfiles --target="$HOME" \
   git \
   lazygit \
   tmux
+
+sudo stow --target="/etc" \
+  keyd
+
+sudo keyd reload
