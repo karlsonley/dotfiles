@@ -1,5 +1,5 @@
 # Update
-flatpak update
+flatpak update -y
 
 # Install applications
 flatpak install -y flathub \
@@ -11,4 +11,4 @@ flatpak install -y flathub \
   org.gnome.Extensions \
 
 # Cleanup
-sudo flatpak uninstall --unused
+sudo flatpak uninstall --unused -y

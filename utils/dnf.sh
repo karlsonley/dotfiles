@@ -35,6 +35,11 @@ sudo dnf remove -y docker \
                    docker-engine-selinux \
                    docker-engine
 
+# Keyd
+sudo dnf copr enable alternateved/keyd -y
+sudo dnf install keyd -y
+sudo systemctl enable --now keyd
+
 sudo dnf install dnf-plugins-core -y
 sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo -y
 
@@ -44,11 +49,10 @@ sudo systemctl enable --now docker
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
 
 # Manually ensure akmod-nvidia is not removed by dnf autoremove
 # https://rpmfusion.org/Howto/NVIDIA#dnf_autoremove
-sudo dnf mark user akmod-nvidia
+sudo dnf mark user akmod-nvidia -y
 
 # Cleanup
 sudo dnf -y autoremove
