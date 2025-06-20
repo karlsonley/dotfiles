@@ -23,6 +23,28 @@ sudo dnf install -y \
 sudo dnf copr enable atim/lazygit -y
 sudo dnf install lazygit -y
 
+# Docker
+sudo dnf remove -y docker \
+                   docker-client \
+                   docker-client-latest \
+                   docker-common \
+                   docker-latest \
+                   docker-latest-logrotate \
+                   docker-logrotate \
+                   docker-selinux \
+                   docker-engine-selinux \
+                   docker-engine
+
+sudo dnf install dnf-plugins-core -y
+sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo -y
+
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+sudo systemctl enable --now docker
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 
 # Manually ensure akmod-nvidia is not removed by dnf autoremove
 # https://rpmfusion.org/Howto/NVIDIA#dnf_autoremove
