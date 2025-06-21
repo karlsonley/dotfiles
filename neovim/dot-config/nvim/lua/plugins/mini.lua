@@ -41,4 +41,11 @@ return {
       require('mini.trailspace').setup()
     end,
   },
+  {
+    'echasnovski/mini.ai',
+    version = false,
+    config = function()
+      require('mini.ai').setup()
+    end,
+  },
 }
