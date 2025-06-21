@@ -50,6 +50,10 @@ sudo systemctl enable --now docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
+# Terraform
+sudo dnf config-manager addrepo --from-repofile=https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+sudo dnf install terraform -y
+
 # Manually ensure akmod-nvidia is not removed by dnf autoremove
 # https://rpmfusion.org/Howto/NVIDIA#dnf_autoremove
 sudo dnf mark user akmod-nvidia -y
