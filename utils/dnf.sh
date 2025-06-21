@@ -18,6 +18,7 @@ sudo dnf install -y \
   stow \
   chromium \
   graphviz \
+  ripgrep \
 
 # Lazygit
 sudo dnf copr enable atim/lazygit -y
