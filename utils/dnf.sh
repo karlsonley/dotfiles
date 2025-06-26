@@ -19,6 +19,8 @@ sudo dnf install -y \
   chromium \
   graphviz \
   ripgrep \
+  rust \
+  cargo \ 
 
 # Lazygit
 sudo dnf copr enable atim/lazygit -y
@@ -58,6 +60,9 @@ sudo dnf install terraform -y
 # Manually ensure akmod-nvidia is not removed by dnf autoremove
 # https://rpmfusion.org/Howto/NVIDIA#dnf_autoremove
 sudo dnf mark user akmod-nvidia -y
+
+# Homebrew deps
+sudo dnf group install development-tools -y
 
 # Cleanup
 sudo dnf -y autoremove
