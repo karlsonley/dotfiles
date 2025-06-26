@@ -20,7 +20,8 @@ sudo dnf install -y \
   graphviz \
   ripgrep \
   rust \
-  cargo \ 
+  cargo \
+  helm \
 
 # Lazygit
 sudo dnf copr enable atim/lazygit -y
