@@ -28,5 +28,6 @@ brew install kubectl
 brew install siderolabs/tap/talosctl
 brew install derailed/k9s/k9s
 brew install fluxcd/tap/flux
+brew install scw
 brew update
 brew upgrade
