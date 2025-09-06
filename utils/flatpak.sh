@@ -9,6 +9,7 @@ flatpak install -y flathub \
   com.spotify.Client \
   app.zen_browser.zen \
   org.gnome.Extensions \
+  io.anytype.anytype \
 
 # Cleanup
 sudo flatpak uninstall --unused -y
