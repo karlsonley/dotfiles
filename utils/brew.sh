@@ -14,6 +14,7 @@ brew install wget
 brew install gnu-tar
 brew install gzip
 brew install stow
+brew install rclone
 
 # Wait before continuing
 sleep 1
