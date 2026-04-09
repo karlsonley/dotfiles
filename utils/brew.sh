@@ -15,6 +15,9 @@ brew install gnu-tar
 brew install gzip
 brew install stow
 brew install rclone
+brew install controlplaneio-fluxcd/tap/flux-operator
+brew install controlplaneio-fluxcd/tap/flux-operator-mcp
+brew install talhelper
 
 # Wait before continuing
 sleep 1
