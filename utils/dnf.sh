@@ -15,10 +15,11 @@ sudo dnf install -y \
   python3.12 \
   fzf \
   ripgrep \
+  fd-find \
+  tree-sitter-cli \
   stow \
   chromium \
   graphviz \
-  ripgrep \
   rust \
   cargo \
   helm \

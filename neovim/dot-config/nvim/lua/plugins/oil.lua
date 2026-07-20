@@ -1,12 +1,12 @@
 return {
-	"stevearc/oil.nvim",
-	config = function()
-		local oil = require("oil")
-		oil.setup({
-			view_options = {
-				show_hidden = true,
-			},
-		})
-		vim.keymap.set("n", "-", oil.toggle_float, {})
-	end,
+  "stevearc/oil.nvim",
+  lazy = false, -- so `nvim <dir>` opens oil
+  opts = {
+    view_options = {
+      show_hidden = true,
+    },
+  },
+  keys = {
+    { "-", function() require("oil").toggle_float() end, desc = "File browser" },
+  },
 }

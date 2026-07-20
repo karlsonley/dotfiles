@@ -5,6 +5,10 @@ brew update
 brew upgrade
 
 # Install packages
+brew install neovim
+brew install tree-sitter-cli # nvim-treesitter (main) builds parsers with the CLI
+brew install ripgrep
+brew install fd
 brew install gcc
 brew install tmux
 brew install git
@@ -18,6 +22,7 @@ brew install rclone
 brew install controlplaneio-fluxcd/tap/flux-operator
 brew install controlplaneio-fluxcd/tap/flux-operator-mcp
 brew install talhelper
+brew install mise
 
 # Wait before continuing
 sleep 1
