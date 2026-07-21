@@ -1,6 +1,7 @@
 return {
   "github/copilot.vim",
   event = "InsertEnter",
+  cmd = "Copilot",
   init = function()
     -- Free <Tab> for blink.cmp; accept suggestions with <C-l> instead.
     vim.g.copilot_no_tab_map = true
@@ -12,7 +13,7 @@ return {
       replace_keycodes = false,
       desc = "Copilot: accept suggestion",
     })
-    vim.keymap.set("i", "<C-]>", "<Plug>(copilot-next)")
-    vim.keymap.set("i", "<C-[>", "<Plug>(copilot-previous)")
+    vim.keymap.set("i", "<C-j>", "<Plug>(copilot-next)")
+    vim.keymap.set("i", "<C-k>", "<Plug>(copilot-previous)")
   end,
 }
