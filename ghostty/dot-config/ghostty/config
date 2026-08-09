@@ -1,0 +1,5 @@
+theme = Catppuccin Mocha
+
+# Norwegian/British-PC layouts default to option-composes-unicode, which eats
+# alt bindings. Left option acts as alt; right option still types @ and #.
+macos-option-as-alt = left

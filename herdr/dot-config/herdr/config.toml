@@ -1,0 +1,12 @@
+# Skip first-run setup — otherwise herdr writes onboarding = false into a real
+# ~/.config/herdr/config.toml, which would collide with the stow symlink.
+onboarding = false
+
+[keys]
+prefix = "ctrl+f"
+# tmux used a hook to remember whether the last jump was a pane or a window;
+# herdr's last_pane already crosses tabs and workspaces, so one binding covers both.
+last_pane = "prefix+space"
+# One agent per workspace, so this is the session switcher. Preferred over
+# switch_workspace, which lands on the workspace's active tab — often a shell.
+focus_agent = "prefix+alt+1..9"

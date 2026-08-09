@@ -5,11 +5,17 @@
 # Lazy creates an empty configfile on download
 rm -rf ~/.config/lazygit
 
+# Herdr writes logs and session sockets next to its config, so keep the
+# directory real and let stow link only config.toml into it
+mkdir -p ~/.config/herdr
+
 stow --dotfiles --target="$HOME" \
   neovim \
   git \
   lazygit \
-  tmux
+  tmux \
+  herdr \
+  ghostty
 
 sudo stow --target="/etc" \
   keyd
@@ -24,6 +30,7 @@ if ! which brew; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+brew install herdr
 brew install kubectl
 brew install siderolabs/tap/talosctl
 brew install derailed/k9s/k9s
